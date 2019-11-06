@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "InnerWheel",
-    "slug": "org.innerwheel",
+    "slug": "innerwheelorg",
     "privacy": "public",
     "sdkVersion": "35.0.0",
     "platforms": [
@@ -14,7 +14,7 @@
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splashImage.png",
-      "resizeMode": "native",
+      "resizeMode": "contain",
       "backgroundColor": "#E9D734"
     },
     "updates": {
