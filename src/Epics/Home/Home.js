@@ -3,7 +3,6 @@ import { Text, View, ScrollView } from 'react-native'
 import { AdoptionProcessCard } from './Component/AdoptionProcessCard/AdoptionProcessCard';
 import styled from 'styled-components/native'
 import { OtherResources } from './Component/OtherResources/OtherResources';
-OtherResources
 
 const Container = styled.ScrollView`
     background-color: #fff8ea;
@@ -55,9 +54,9 @@ export class Home extends Component {
                 <SecondaryTitle>Know More About C.A.R.A.</SecondaryTitle>
                 <SecondaryTitle>Other Resources</SecondaryTitle>
                 <OtherResourcesContainer>
-                <OtherResources title = "Adoption Councelling"/>
-                <OtherResources title = "Adoption Statistics"/>
-                <OtherResources title = "Success Stories"/>
+                    <OtherResources image="../../../../../assets/councelling.png" title="Adoption Councelling" />
+                    <OtherResources image="../../../../../assets/councelling.png" title="Adoption Statistics" />
+                    <OtherResources image="../../../../../assets/councelling.png" title="Success Stories" />
                 </OtherResourcesContainer>
             </Container>
         )
