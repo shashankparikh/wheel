@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View, ScrollView } from 'react-native'
-import { AdoptionProcessCard } from './Component/AdoptionProcessCard/AdoptionProcessCard';
+import { AdoptionProcessCard } from './Component/AdoptionProcessCard/AdoptionProcessCard'
 import styled from 'styled-components/native'
 import { OtherResources } from './Component/OtherResources/OtherResources';
 
@@ -37,6 +37,13 @@ const SecondaryTitle = styled.Text`
 `
 
 export class Home extends Component {
+    static navigationOptions = {
+        // To set the header image and title for the current Screen
+        title: 'Home Activity',
+        drawerIcon: ({ tintColor }) => (
+            <Icon name='home' style={{ fontSize: 24, color: tintColor }} />
+        )
+    }
     render() {
         return (
             <Container>
