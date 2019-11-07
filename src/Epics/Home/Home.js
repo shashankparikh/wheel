@@ -1,9 +1,16 @@
 import React, { Component } from 'react'
 import { Text, View, ScrollView } from 'react-native'
-import { AdoptionProcessCard } from './Component/AdoptionProcessCard/AdoptionProcessCard';
+import { AdoptionProcessCard } from './Component/AdoptionProcessCard/AdoptionProcessCard'
 import styled from 'styled-components/native'
-import { OtherResources } from './Component/OtherResources/OtherResources';
-OtherResources
+import { OtherResources } from './Component/OtherResources/OtherResources'
+// import {
+//   Container,
+//   TitleTop,
+//   SubTitleTop,
+//   OtherResourcesContainer,
+//   SecondaryTitle
+// } from './style'
+
 
 const Container = styled.ScrollView`
     background-color: #fff8ea;
@@ -38,30 +45,37 @@ const SecondaryTitle = styled.Text`
 `
 
 export class Home extends Component {
-    render() {
-        return (
-            <Container>
-                <TitleTop>Looking for Adoption Process?</TitleTop>
-                <SubTitleTop>Select Category</SubTitleTop>
-                <ScrollView horizontal={true} alwaysBounceHorizontal={true}>
-                    <AdoptionProcessCard title="NRI/Indian Living Abroad" />
-                    <AdoptionProcessCard title="Foreigner Living Abroad" />
-                    <AdoptionProcessCard title="Foreigner Living Abroad" />
-                    <AdoptionProcessCard title="Foreigner Living Abroad" />
-                    <AdoptionProcessCard title="Foreigner Living Abroad" />
-                    <AdoptionProcessCard title="Foreigner Living Abroad" />
-                </ScrollView>
-                <SecondaryTitle>Search Agencies</SecondaryTitle>
-                <SecondaryTitle>Know More About C.A.R.A.</SecondaryTitle>
-                <SecondaryTitle>Other Resources</SecondaryTitle>
-                <OtherResourcesContainer>
-                <OtherResources title = "Adoption Councelling"/>
-                <OtherResources title = "Adoption Statistics"/>
-                <OtherResources title = "Success Stories"/>
-                </OtherResourcesContainer>
-            </Container>
-        )
-    }
+  static navigationOptions = {
+    // To set the header image and title for the current Screen
+    title: 'Home Activity',
+    drawerIcon: ({ tintColor }) => (
+      <Icon name='home' style={{ fontSize: 24, color: tintColor }} />
+    )
+  }
+  render () {
+    return (
+      <Container>
+        <TitleTop>Looking for Adoption Process?</TitleTop>
+        <SubTitleTop>Select Category</SubTitleTop>
+        <ScrollView horizontal alwaysBounceHorizontal>
+          <AdoptionProcessCard title='NRI/Indian Living Abroad' />
+          <AdoptionProcessCard title='Foreigner Living Abroad' />
+          <AdoptionProcessCard title='Foreigner Living Abroad' />
+          <AdoptionProcessCard title='Foreigner Living Abroad' />
+          <AdoptionProcessCard title='Foreigner Living Abroad' />
+          <AdoptionProcessCard title='Foreigner Living Abroad' />
+        </ScrollView>
+        <SecondaryTitle>Search Agencies</SecondaryTitle>
+        <SecondaryTitle>Know More About C.A.R.A.</SecondaryTitle>
+        <SecondaryTitle>Other Resources</SecondaryTitle>
+        <OtherResourcesContainer>
+          <OtherResources title='Adoption Councelling' />
+          <OtherResources title='Adoption Statistics' />
+          <OtherResources title='Success Stories' />
+        </OtherResourcesContainer>
+      </Container>
+    )
+  }
 }
 
 export default Home
