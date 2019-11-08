@@ -16,8 +16,11 @@ import { Ionicons } from '@expo/vector-icons';
 import theme from './src/style/theme'
 import HomeScreen from './src/Epics/Home/Home'
 import searchAgency from './src/Epics/SearchAgency/SearchAgency'
+import TabScreen from './src/CommonComponents/Tabs/Tabs'
+import Tabs from './src/CommonComponents/Tabs/Tabs'
 import styled from 'styled-components/native'
 import SideMenu from './src/CommonComponents/SideMenu/SideMenu';
+
 
 const MenuIcon = styled(Ionicons)`
 margin-left: 10px;    
@@ -58,7 +61,32 @@ const mainScreenStack = createStackNavigator(
   }
 );
 
+
+const tabScreenStack = createStackNavigator(
+  {
+    Tabs: {
+      screen: Tabs,
+      name: 'awesrdfhg'
+    }
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      headerStyle: {
+        backgroundColor: '#e8d546'
+      },
+      headerTintColor: '#000',
+      headerTitleStyle: {
+        fontWeight: 'bold'
+      },
+      headerLeft: (
+        <MenuIcon name="ios-menu" size={32} color="black" onPress={() => navigation.toggleDrawer()} />
+      )
+    })
+  }
+);
+
 const searchAgencyStack = createStackNavigator(
+
   {
     SecondScreen: {
       screen: searchAgency,
@@ -88,6 +116,9 @@ const AppDrawerNavigator = createDrawerNavigator({
   },
   searchAgencyStack: {
     screen: searchAgencyStack,
+  },
+  tabScreenStack:{
+    screen:tabScreenStack,
   }
 },
   {
