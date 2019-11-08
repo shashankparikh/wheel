@@ -5,7 +5,7 @@ import styled from 'styled-components/native'
 
 const TitleImage = styled.Image`
 margin-left : 10px;
-margin-bottom : 5px;
+margin-bottom : 10px;
 `
 
 const Title = styled.Text`
@@ -19,9 +19,6 @@ text-align: left;
 
 
 export class KnowMore extends Component {
-    componentWillMount() {
-        console.log(this.props.color, "color")
-    }
     render() {
         const Container = styled.View`
             height : 90px;
@@ -44,13 +41,13 @@ export class KnowMore extends Component {
             text-transform: uppercase;
             text-align: left;
         `
-        console.log(this.props.image, "this.props.image")
-
+        console.log(typeof this.props.width, "this.props.width")
+        let Width = Number(this.props.width)
+        let Height = Number(this.props.height)
         return (
-
             <Container>
                 {/* <TitleImage style={{ width: 30, height: 35 }} source={require('../../../../../assets/councelling.png')} /> */}
-                <TitleImage style={{ width: 30, height: 35 }} source={this.props.image} />
+                <TitleImage style={{ width: Width, height: Height }} source={this.props.image} />
                 <Title> {this.props.title} </Title>
             </Container>
         )
