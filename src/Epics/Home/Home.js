@@ -63,6 +63,9 @@ export class Home extends Component {
             <Icon name='home' style={{ fontSize: 24, color: tintColor }} />
         )
     }
+    onCardClick=()=>{
+        console.log("dsfgh")
+        this.props.navigation.navigate('tabScreenStack')
 
     openPage = () => {
 
@@ -74,7 +77,7 @@ export class Home extends Component {
                 <TitleTop>Looking for Adoption Process?</TitleTop>
                 <SubTitleTop>Select Category</SubTitleTop>
                 <ScrollView horizontal={true} alwaysBounceHorizontal={true}>
-                    <AdoptionProcessCard title="NRI/Indian Living Abroad" />
+                    <AdoptionProcessCard title="NRI/Indian Living Abroad" onClick={this.onCardClick}/>
                     <AdoptionProcessCard title="Foreigner Living Abroad" />
                     <AdoptionProcessCard title="Foreigner Living Abroad" />
                     <AdoptionProcessCard title="Foreigner Living Abroad" />
