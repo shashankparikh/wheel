@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 import styled from 'styled-components/native'
 
-const StyledView = styled.View`
+const StyledView = styled.TouchableOpacity`
     background-color: #fff6d7;
     height: 120px;
     elevation : 5;
@@ -23,7 +23,7 @@ const Title = styled.Text`
 export class AdoptionProcessCard extends Component {
     render() {
         return (
-            <StyledView>
+            <StyledView onPress={this.props.onClick}> 
                 <Title> {this.props.title} </Title>
             </StyledView>
         )
