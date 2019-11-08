@@ -20,6 +20,8 @@ import TabScreen from './src/CommonComponents/Tabs/Tabs'
 import Tabs from './src/CommonComponents/Tabs/Tabs'
 import styled from 'styled-components/native'
 import SideMenu from './src/CommonComponents/SideMenu/SideMenu';
+import AboutUs from './src/Epics/AboutUs/AboutUs';
+import * as Font from 'expo-font';
 
 
 const MenuIcon = styled(Ionicons)`
@@ -85,25 +87,25 @@ const tabScreenStack = createStackNavigator(
   }
 );
 
-const searchAgencyStack = createStackNavigator(
+const AboutUsStack = createStackNavigator(
 
   {
-    SecondScreen: {
-      screen: searchAgency,
-      name: 'Seach Agency'
+    AboutUs: {
+      screen: AboutUs,
+      name: 'About Us'
     }
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
       headerStyle: {
-        backgroundColor: '#f4511e'
+        backgroundColor: '#e8d546'
       },
-      headerTintColor: '#fff',
+      headerTintColor: '#000',
       headerTitleStyle: {
         fontWeight: 'bold'
       },
       headerLeft: (
-        <Ionicons name="ios-menu" size={32} color="black" onPress={() => navigation.toggleDrawer()} />
+        <MenuIcon name="ios-menu" size={32} color="black" onPress={() => navigation.toggleDrawer()} />
       )
     })
   }
@@ -111,14 +113,14 @@ const searchAgencyStack = createStackNavigator(
 
 
 const AppDrawerNavigator = createDrawerNavigator({
+  AboutUsStack: {
+    screen: AboutUsStack
+  },
   mainScreenStack: {
     screen: mainScreenStack,
   },
-  searchAgencyStack: {
-    screen: searchAgencyStack,
-  },
-  tabScreenStack:{
-    screen:tabScreenStack,
+  tabScreenStack: {
+    screen: tabScreenStack,
   }
 },
   {
@@ -130,6 +132,14 @@ const AppDrawerNavigator = createDrawerNavigator({
 )
 
 class App extends React.Component {
+
+  componentDidMount() {
+    Font.loadAsync({
+      'roboto': require('./assets/fonts/Roboto-Regular.ttf'),
+    });
+  }
+
+
   render() {
     return (
       <ThemeProvider theme={theme}>

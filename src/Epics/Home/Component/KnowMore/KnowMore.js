@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, Image } from 'react-native'
+import { Text, View, Image, TouchableOpacity, Linking } from 'react-native'
 import styled from 'styled-components/native'
 
 
@@ -19,8 +19,13 @@ text-align: left;
 
 
 export class KnowMore extends Component {
+
+    openPage = () => {
+        Linking.openURL(this.props.url)
+    }
+
     render() {
-        const Container = styled.View`
+        const Container = styled.TouchableOpacity`
             height : 90px;
             background: ${props => this.props.color};
             elevation : 5;
@@ -45,7 +50,7 @@ export class KnowMore extends Component {
         let Width = Number(this.props.width)
         let Height = Number(this.props.height)
         return (
-            <Container>
+            <Container onPress={this.openPage} >
                 {/* <TitleImage style={{ width: 30, height: 35 }} source={require('../../../../../assets/councelling.png')} /> */}
                 <TitleImage style={{ width: Width, height: Height }} source={this.props.image} />
                 <Title> {this.props.title} </Title>
