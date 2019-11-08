@@ -1,16 +1,17 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { NavigationActions } from 'react-navigation';
-import { ScrollView, Text, View } from 'react-native';
+import { ScrollView, Text, View, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import styled from 'styled-components/native';
 import LottieView from "lottie-react-native";
 
-const MenuItemContainer = styled.View`
- padding : 15px 0px;
+const MenuItemContainer = styled.TouchableOpacity`
+ padding : 15px 10px;
  display : flex;
  align-items : center;
- width : 100%;
+ border-bottom-width : 1;
+ border-bottom-color : #C4B812;
  border-style : dotted;
  border-radius: 5;
  flex-direction : row;
@@ -18,6 +19,8 @@ const MenuItemContainer = styled.View`
 
 const MenuTitle = styled.Text`
  font-size : 18px;
+ font-weight : 600;
+ font-family : roboto;
 `
 
 const MenuIcon = styled(FontAwesome)`
@@ -37,7 +40,7 @@ const CloseIconContainer = styled.View`
   padding : 20px;
 `
 
-const MenuButton = styled.View`
+const MenuButton = styled.TouchableOpacity`
   margin : 20px 10px;
   border-radius: 50px;
   elevation : 5;
@@ -46,8 +49,9 @@ const MenuButton = styled.View`
 `
 
 const ButtonText = styled.Text`
-  font-size : 12;
-  font-weight : 500;
+  font-size : 14;
+  font-weight : 600;
+  font-family : roboto;
 `
 
 
@@ -81,8 +85,8 @@ class SideMenu extends Component {
                   this.animation = animation;
                 }}
                 style={{
-                  width: 160,
-                  height: 160,
+                  width: 180,
+                  height: 180,
                   backgroundColor: '#ead912',
                 }}
                 source={require('../../../assets/menuAnimation.json')}
@@ -92,27 +96,21 @@ class SideMenu extends Component {
             </View>
             {/* <MenuIcon name="close" size={36} color="black" /> */}
           </CloseIconContainer>
-          <MenuItemContainer >
-            <MenuIcon name="home" size={18} color="black" />
-            <MenuTitle onPress={() => this.props.navigation.navigate('mainScreenStack')}>
+          <MenuItemContainer onPress={() => this.props.navigation.navigate('mainScreenStack')}>
+            <MenuIcon name="home" size={24} color="black" />
+            <MenuTitle >
               Home
               </MenuTitle>
           </MenuItemContainer>
-          <MenuItemContainer >
-            <MenuIcon name="search" size={18} color="black" />
-            <MenuTitle onPress={() => this.props.navigation.navigate('searchAgencyStack')}>
-              Lookup Agencies
-              </MenuTitle>
-          </MenuItemContainer>
-          <MenuItemContainer >
-            <MenuIcon name="info-circle" size={18} color="black" />
-            <MenuTitle onPress={() => this.props.navigation.navigate('searchAgencyStack')}>
+          <MenuItemContainer onPress={() => this.props.navigation.navigate('AboutUsStack')} >
+            <MenuIcon name="info-circle" size={22} color="black" />
+            <MenuTitle>
               About Us
               </MenuTitle>
           </MenuItemContainer>
           <MenuButton>
             <ButtonText>
-              Looking for Adoption? .
+              Looking for Adoption?
               </ButtonText>
           </MenuButton>
         </ScrollView>

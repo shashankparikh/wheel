@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Text, View, Image } from 'react-native'
+import { Text, View, Image, TouchableOpacity, Linking } from 'react-native'
 import styled from 'styled-components/native'
 
-const Container = styled.View`
+const Container = styled.TouchableOpacity`
     height : 90px;
     background color : #fef4d9;
     elevation : 5;
@@ -30,9 +30,14 @@ text-align: left;
 
 
 export class OtherResources extends Component {
+
+    openPage = () => {
+        Linking.openURL(this.props.url)
+    }
+
     render() {
         return (
-            <Container>
+            <Container onPress={this.openPage}>
                 <TitleImage style={{ width: 26, height: 26 }} source={this.props.image} />
                 <Title> {this.props.title} </Title>
             </Container>
