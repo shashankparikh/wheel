@@ -4,6 +4,7 @@ import { NavigationActions } from 'react-navigation';
 import { ScrollView, Text, View } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import styled from 'styled-components/native';
+import LottieView from "lottie-react-native";
 
 const MenuItemContainer = styled.View`
  padding : 15px 0px;
@@ -58,12 +59,38 @@ class SideMenu extends Component {
     this.props.navigation.dispatch(navigateAction);
   }
 
+  componentDidMount() {
+    this.animation.play();
+    // Or set a specific startFrame and endFrame with:
+    // this.animation.play(30, 120);
+  }
+
+  resetAnimation = () => {
+    this.animation.reset();
+    this.animation.play();
+  };
+
   render() {
     return (
       <MenuContainer >
         <ScrollView centerContent contentContainerStyle={{ alignItems: "center", justifyContent: "center", flex: 1, width: "100%" }} >
           <CloseIconContainer >
-            <MenuIcon name="close" size={36} color="black" />
+            <View >
+              <LottieView
+                ref={animation => {
+                  this.animation = animation;
+                }}
+                style={{
+                  width: 160,
+                  height: 160,
+                  backgroundColor: '#ead912',
+                }}
+                source={require('../../../assets/menuAnimation.json')}
+              // OR find more Lottie files @ https://lottiefiles.com/featured
+              // Just click the one you like, place that file in the 'assets' folder to the left, and replace the above 'require' statement
+              />
+            </View>
+            {/* <MenuIcon name="close" size={36} color="black" /> */}
           </CloseIconContainer>
           <MenuItemContainer >
             <MenuIcon name="home" size={18} color="black" />
