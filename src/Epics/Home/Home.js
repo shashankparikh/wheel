@@ -58,12 +58,12 @@ const SecondaryTitle = styled.Text`
 export class Home extends Component {
     static navigationOptions = {
         // To set the header image and title for the current Screen
-        title: 'Home Activity',
+        title: 'Home ',
         drawerIcon: ({ tintColor }) => (
             <Icon name='home' style={{ fontSize: 24, color: tintColor }} />
         )
     }
-    onCardClick=()=>{
+    onCardClick = () => {
         console.log("dsfgh")
         this.props.navigation.navigate('tabScreenStack')
     }
@@ -71,6 +71,7 @@ export class Home extends Component {
 
         Linking.openURL('https://google.com')
     }
+
     render() {
         return (
             <Container>
@@ -90,15 +91,15 @@ export class Home extends Component {
                 </SearchAgencyContainer>
                 <SecondaryTitle>Know More About C.A.R.A.</SecondaryTitle>
                 <KnowMoreContainer>
-                    <KnowMore onPress={this.openPage} title="Website" width="29" height="28" color="#fed9d9" textColor="#b64129" image={require('../../../assets/website.png')} />
-                    <KnowMore title="Call" width="25" height="25" color="#dfd9ff" textColor="#5739be" image={require('../../../assets/call.png')} />
-                    <KnowMore title="Email" width="26" height="20" color="#dbfbc3" textColor="#6aa53d" image={require('../../../assets/email.png')} />
+                    <KnowMore url="https://google.com" title="Website" width="29" height="28" color="#fed9d9" textColor="#b64129" image={require('../../../assets/website.png')} />
+                    <KnowMore url="https://google.com" title=" Call" width="25" height="25" color="#dfd9ff" textColor="#5739be" image={require('../../../assets/call.png')} />
+                    <KnowMore url="https://google.com" title=" Email" width="26" height="20" color="#dbfbc3" textColor="#6aa53d" image={require('../../../assets/email.png')} />
                 </KnowMoreContainer>
                 <SecondaryTitle>Other Resources</SecondaryTitle>
                 <OtherResourcesContainer>
-                    <OtherResources image={require('../../../assets/councelling.png')} title="Adoption Councelling" />
-                    <OtherResources image={require('../../../assets/statistics.png')} title="Adoption Statistics" />
-                    <OtherResources image={require('../../../assets/success.png')} title="Success Stories" />
+                    <OtherResources url="https://google.com" image={require('../../../assets/councelling.png')} title="Adoption Councelling" />
+                    <OtherResources url="https://google.com" image={require('../../../assets/statistics.png')} title="Adoption Statistics" />
+                    <OtherResources url="https://google.com" image={require('../../../assets/success.png')} title="Success Stories" />
                 </OtherResourcesContainer>
             </Container>
         )
