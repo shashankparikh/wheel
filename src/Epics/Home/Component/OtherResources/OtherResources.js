@@ -33,7 +33,7 @@ export class OtherResources extends Component {
     render() {
         return (
             <Container>
-                <TitleImage style={{ width: 30, height: 35 }} source={require('../../../../../assets/councelling.png')} />
+                <TitleImage style={{ width: 26, height: 26 }} source={this.props.image} />
                 <Title> {this.props.title} </Title>
             </Container>
         )
