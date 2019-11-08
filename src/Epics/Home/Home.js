@@ -3,6 +3,8 @@ import { Text, View, ScrollView } from 'react-native'
 import { AdoptionProcessCard } from './Component/AdoptionProcessCard/AdoptionProcessCard'
 import styled from 'styled-components/native'
 import { OtherResources } from './Component/OtherResources/OtherResources';
+import { KnowMore } from './Component/KnowMore/KnowMore';
+import { SearchInput } from './Component/SearchInput/SearchInput';
 
 const Container = styled.ScrollView`
     background-color: #fff8ea;
@@ -27,12 +29,29 @@ const OtherResourcesContainer = styled.View`
     flex-direction : row;
     align-items: center;
     justify-content: center;
+    margin : 10px 10px 10px 10px   
+`
+
+const KnowMoreContainer = styled.View`
+    display : flex;
+    flex-direction : row;
+    align-items: center;
+    justify-content: center;
+    margin : 10px 10px 10px 10px   
+`
+
+const SearchAgencyContainer = styled.View`
+    display : flex;
+    flex-direction : row;
+    align-items: center;
+    justify-content: center;
     margin : 0px 10px 10px 10px   
 `
+
 const SecondaryTitle = styled.Text`
     background-color: #fff8ea;
     font-size: 26px;
-    padding : 10px 20px 5px 20px;
+    padding : 20px 20px 5px 20px;
     font-weight : 600;
 `
 
@@ -58,7 +77,15 @@ export class Home extends Component {
                     <AdoptionProcessCard title="Foreigner Living Abroad" />
                 </ScrollView>
                 <SecondaryTitle>Search Agencies</SecondaryTitle>
+                <SearchAgencyContainer>
+                    <SearchInput />
+                </SearchAgencyContainer>
                 <SecondaryTitle>Know More About C.A.R.A.</SecondaryTitle>
+                <KnowMoreContainer>
+                    <KnowMore title="Website" color="#fed9d9" textColor="#b64129" image={require('../../../assets/website.png')} />
+                    <KnowMore title="Call" color="#dfd9ff" textColor="#5739be" image={require('../../../assets/call.png')} />
+                    <KnowMore title="Email" color="#dbfbc3" textColor="#6aa53d" image={require('../../../assets/email.png')} />
+                </KnowMoreContainer>
                 <SecondaryTitle>Other Resources</SecondaryTitle>
                 <OtherResourcesContainer>
                     <OtherResources image="../../../../../assets/councelling.png" title="Adoption Councelling" />
