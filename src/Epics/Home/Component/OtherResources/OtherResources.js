@@ -15,7 +15,6 @@ const Container = styled.View`
     shadow-offset: {width: 0, height: 8};
 `
 const TitleImage = styled.Image`
-text-align: left;
 margin-left : 10px;
 margin-bottom : 5px;
 `
