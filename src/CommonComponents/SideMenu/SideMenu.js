@@ -4,6 +4,7 @@ import { NavigationActions } from 'react-navigation';
 import { ScrollView, Text, View, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import styled from 'styled-components/native';
+import * as Font from 'expo-font';
 import LottieView from "lottie-react-native";
 
 const MenuItemContainer = styled.TouchableOpacity`
@@ -56,6 +57,11 @@ const ButtonText = styled.Text`
 
 
 class SideMenu extends Component {
+
+  onButtonClick = () => {
+    this.props.navigation.navigate('adoptionFormStack')
+  }
+
   navigateToScreen = (route) => () => {
     const navigateAction = NavigationActions.navigate({
       routeName: route
@@ -64,9 +70,10 @@ class SideMenu extends Component {
   }
 
   componentDidMount() {
+    Font.loadAsync({
+      roboto: require('../../../assets/fonts/Roboto-Regular.ttf'),
+    });
     this.animation.play();
-    // Or set a specific startFrame and endFrame with:
-    // this.animation.play(30, 120);
   }
 
   resetAnimation = () => {
@@ -94,7 +101,6 @@ class SideMenu extends Component {
               // Just click the one you like, place that file in the 'assets' folder to the left, and replace the above 'require' statement
               />
             </View>
-            {/* <MenuIcon name="close" size={36} color="black" /> */}
           </CloseIconContainer>
           <MenuItemContainer onPress={() => this.props.navigation.navigate('mainScreenStack')}>
             <MenuIcon name="home" size={24} color="black" />
@@ -108,7 +114,7 @@ class SideMenu extends Component {
               About Us
               </MenuTitle>
           </MenuItemContainer>
-          <MenuButton>
+          <MenuButton onPress={this.onButtonClick}>
             <ButtonText>
               Looking for Adoption?
               </ButtonText>

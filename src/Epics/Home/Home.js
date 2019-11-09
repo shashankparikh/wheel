@@ -64,11 +64,9 @@ export class Home extends Component {
         )
     }
     onCardClick = () => {
-        console.log("dsfgh")
         this.props.navigation.navigate('tabScreenStack')
     }
     openPage = () => {
-
         Linking.openURL('https://google.com')
     }
 
@@ -78,12 +76,11 @@ export class Home extends Component {
                 <TitleTop>Looking for Adoption Process?</TitleTop>
                 <SubTitleTop>Select Category</SubTitleTop>
                 <ScrollView horizontal={true} alwaysBounceHorizontal={true}>
-                    <AdoptionProcessCard title="NRI/Indian Living Abroad" onClick={this.onCardClick}/>
-                    <AdoptionProcessCard title="Foreigner Living Abroad" onClick={this.onCardClick}/>
-                    <AdoptionProcessCard title="Foreigner Living Abroad" onClick={this.onCardClick}/>
-                    <AdoptionProcessCard title="Foreigner Living Abroad" onClick={this.onCardClick}/>
-                    <AdoptionProcessCard title="Foreigner Living Abroad" onClick={this.onCardClick}/>
-
+                    <AdoptionProcessCard title="NRI/Indian Living Abroad" onClick={this.onCardClick} />
+                    <AdoptionProcessCard title="Foreigner Living Abroad" onClick={this.onCardClick} />
+                    <AdoptionProcessCard title="Foreigner Living Abroad" onClick={this.onCardClick} />
+                    <AdoptionProcessCard title="Foreigner Living Abroad" onClick={this.onCardClick} />
+                    <AdoptionProcessCard title="Foreigner Living Abroad" onClick={this.onCardClick} />
                 </ScrollView>
                 <SecondaryTitle>Search Agencies</SecondaryTitle>
                 <SearchAgencyContainer>

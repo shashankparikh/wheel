@@ -22,6 +22,7 @@ import styled from 'styled-components/native'
 import SideMenu from './src/CommonComponents/SideMenu/SideMenu';
 import AboutUs from './src/Epics/AboutUs/AboutUs';
 import * as Font from 'expo-font';
+import AdoptorForm from './src/Epics/AdoptorForm/AdoptorForm';
 
 
 const MenuIcon = styled(Ionicons)`
@@ -63,12 +64,35 @@ const mainScreenStack = createStackNavigator(
   }
 );
 
+const adoptorFormStack = createStackNavigator(
+  {
+    MainScreen: {
+      screen: AdoptorForm,
+      name: 'Adoption Form'
+    }
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      headerStyle: {
+        backgroundColor: '#e8d546'
+      },
+      headerTintColor: '#000',
+      headerTitleStyle: {
+        fontWeight: 'bold'
+      },
+      headerLeft: (
+        <MenuIcon name="ios-menu" size={32} color="black" onPress={() => navigation.toggleDrawer()} />
+      )
+    })
+  }
+);
+
 
 const tabScreenStack = createStackNavigator(
   {
     Tabs: {
       screen: Tabs,
-      name: 'awesrdfhg'
+      name: 'Process Details'
     }
   },
   {
@@ -91,7 +115,8 @@ const AboutUsStack = createStackNavigator(
 
   {
     AboutUs: {
-      screen: AboutUs,
+      // screen: AboutUs,
+      screen: AdoptorForm,
       name: 'About Us'
     }
   },
@@ -114,13 +139,17 @@ const AboutUsStack = createStackNavigator(
 
 const AppDrawerNavigator = createDrawerNavigator({
   AboutUsStack: {
-    screen: AboutUsStack
+    // screen: AboutUsStack
+    screen: AdoptorForm
   },
   mainScreenStack: {
     screen: mainScreenStack,
   },
   tabScreenStack: {
     screen: tabScreenStack,
+  },
+  adoptorFormStack: {
+    screen: adoptorFormStack
   }
 },
   {
