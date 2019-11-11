@@ -162,8 +162,8 @@ const AppDrawerNavigator = createDrawerNavigator({
 
 class App extends React.Component {
 
-  componentDidMount() {
-    Font.loadAsync({
+  async componentDidMount() {
+    await Font.loadAsync({
       'roboto': require('./assets/fonts/Roboto-Regular.ttf'),
     });
   }

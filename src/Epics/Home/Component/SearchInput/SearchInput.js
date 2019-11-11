@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { Text, View, Picker,Linking } from 'react-native'
+import { Text, View, Picker, Linking } from 'react-native'
 import styled from 'styled-components/native'
 import { FontAwesome } from '@expo/vector-icons'
 import { state } from './StateData'
 
 const SearchAgencyContainer = styled.View`
   flex-direction: row;
-  margin-left: 20px;
+  margin-left: 10px;
   justify-content: flex-start;
 `
 
@@ -14,7 +14,7 @@ const PickerContainer = styled.View`
   border: 1px solid black;
   padding: 0px 10px;
   width: 200px;
-  flex: 1.25;
+  flex: 2;
   border-radius: 10px;
 `
 const SearchButtonIcon = styled(FontAwesome)`
@@ -43,12 +43,12 @@ export class SearchInput extends Component {
     selectedArea: 'AN',
     stateData: []
   }
-  openSearchResult=()=>{
-      Linking.openURL('https://www.google.com/'+this.state.selectedArea)
+  openSearchResult = () => {
+    Linking.openURL('https://carings.nic.in/parents/searchagencynew.aspx?state=' + this.state.selectedArea)
   }
 
-  render () {
-      console.log(this.state.selectedArea,"selectedarea")
+  render() {
+    console.log(this.state.selectedArea, "selectedarea")
     return (
       <SearchAgencyContainer>
         <PickerContainer>

@@ -78,9 +78,9 @@ export class Home extends Component {
                 <ScrollView horizontal={true} alwaysBounceHorizontal={true}>
                     <AdoptionProcessCard title="NRI/Indian Living Abroad" onClick={this.onCardClick} />
                     <AdoptionProcessCard title="Foreigner Living Abroad" onClick={this.onCardClick} />
-                    <AdoptionProcessCard title="Foreigner Living Abroad" onClick={this.onCardClick} />
-                    <AdoptionProcessCard title="Foreigner Living Abroad" onClick={this.onCardClick} />
-                    <AdoptionProcessCard title="Foreigner Living Abroad" onClick={this.onCardClick} />
+                    <AdoptionProcessCard title="Foreigner Living in India" onClick={this.onCardClick} />
+                    <AdoptionProcessCard title="Relative Adoption" onClick={this.onCardClick} />
+                    <AdoptionProcessCard title="Adoption by Step Parent" onClick={this.onCardClick} />
                 </ScrollView>
                 <SecondaryTitle>Search Agencies</SecondaryTitle>
                 <SearchAgencyContainer>
@@ -88,15 +88,15 @@ export class Home extends Component {
                 </SearchAgencyContainer>
                 <SecondaryTitle>Know More About C.A.R.A.</SecondaryTitle>
                 <KnowMoreContainer>
-                    <KnowMore url="https://google.com" title="Website" width="29" height="28" color="#fed9d9" textColor="#b64129" image={require('../../../assets/website.png')} />
-                    <KnowMore url="https://google.com" title=" Call" width="25" height="25" color="#dfd9ff" textColor="#5739be" image={require('../../../assets/call.png')} />
-                    <KnowMore url="https://google.com" title=" Email" width="26" height="20" color="#dbfbc3" textColor="#6aa53d" image={require('../../../assets/email.png')} />
+                    <KnowMore url="http://cara.nic.in/" title="Website" width="29" height="28" color="#fed9d9" textColor="#b64129" image={require('../../../assets/website.png')} />
+                    <KnowMore url="tel:1800-11-1311" title=" Call" width="25" height="25" color="#dfd9ff" textColor="#5739be" image={require('../../../assets/call.png')} />
+                    <KnowMore url="mailto: carahdesk.wcd@nic.in" title=" Email" width="26" height="20" color="#dbfbc3" textColor="#6aa53d" image={require('../../../assets/email.png')} />
                 </KnowMoreContainer>
                 <SecondaryTitle>Other Resources</SecondaryTitle>
                 <OtherResourcesContainer>
-                    <OtherResources url="https://google.com" image={require('../../../assets/councelling.png')} title="Adoption Councelling" />
-                    <OtherResources url="https://google.com" image={require('../../../assets/statistics.png')} title="Adoption Statistics" />
-                    <OtherResources url="https://google.com" image={require('../../../assets/success.png')} title="Success Stories" />
+                    <OtherResources url="https://carings.nic.in/Counselling2/Counselling.htm" image={require('../../../assets/councelling.png')} title="Adoption Councelling" />
+                    <OtherResources url="http://cara.nic.in/resource/adoption_Stattistics.html" image={require('../../../assets/statistics.png')} title="Adoption Statistics" />
+                    <OtherResources url="http://cara.nic.in/glimpse/sucess_story.html" image={require('../../../assets/success.png')} title="Success Stories" />
                 </OtherResourcesContainer>
             </Container>
         )
