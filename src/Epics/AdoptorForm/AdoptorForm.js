@@ -53,7 +53,6 @@ const PickerField = styled.TextInput`
     font-size : 18;
 `
 
-
 export class AdoptorForm extends Component {
 
     constructor(props) {
