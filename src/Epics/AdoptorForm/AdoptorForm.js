@@ -58,12 +58,12 @@ export class AdoptorForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: 'your name',
-            gender: 'select gender',
-            age: 'your age',
-            category: 'select category',
-            city: 'enter city',
-            remark: 'your preference/remarks',
+            name: '',
+            gender: '',
+            age: '',
+            category: '',
+            city: '',
+            remark: '',
         };
     }
 
@@ -83,32 +83,42 @@ export class AdoptorForm extends Component {
                 <InputContainer>
                     <InputField
                         onChangeText={name => this.setState({ name })}
+                        placeholder="your name"
+                        autoFocus="true"
                         value={this.state.name} />
+
                 </InputContainer>
                 <InputContainer>
                     <InputField
                         onChangeText={gender => this.setState({ gender })}
+                        placeholder="select gender"
                         value={this.state.gender} />
                 </InputContainer>
                 <InputContainer>
                     <InputField
                         onChangeText={age => this.setState({ age })}
+                        placeholder="your age"
+                        keyboardType="numeric"
                         value={this.state.age} />
                 </InputContainer>
                 <InputContainer>
                     <InputField
                         onChangeText={category => this.setState({ category })}
+                        placeholder="select category"
                         value={this.state.category} />
                 </InputContainer>
                 <InputContainer>
                     <InputField
-                        onChangeText={remark => this.setState({ remark })}
-                        value={this.state.remark} />
+                        onChangeText={city => this.setState({ city })}
+                        autoCapitalize="true"
+                        placeholder="enter city"
+                        value={this.state.city} />
                 </InputContainer>
                 <InputContainer>
                     <InputField
-                        onChangeText={city => this.setState({ city })}
-                        value={this.state.city} />
+                        onChangeText={remark => this.setState({ remark })}
+                        placeholder="your preference/remarks"
+                        value={this.state.remark} />
                 </InputContainer>
                 <Button>
                     <ButtonText>SUBMIT</ButtonText>
