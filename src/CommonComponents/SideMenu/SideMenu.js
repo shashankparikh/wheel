@@ -69,8 +69,8 @@ class SideMenu extends Component {
     this.props.navigation.dispatch(navigateAction);
   }
 
-  componentDidMount() {
-    Font.loadAsync({
+  async componentDidMount() {
+    await Font.loadAsync({
       roboto: require('../../../assets/fonts/Roboto-Regular.ttf'),
     });
     this.animation.play();

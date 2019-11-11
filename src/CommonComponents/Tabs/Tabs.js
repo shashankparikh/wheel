@@ -16,8 +16,8 @@ const Tabs = createMaterialTopTabNavigator({
             activeTintColor: '#000',
             inactiveTintColor: 'gray',
             style: {
-                backgroundColor: '#fff',
-                border: "0px solid #fff"
+                backgroundColor: '#fff8ea',
+                border: "0px solid #fff8ea"
             },
             indicatorStyle: {
                 backgroundColor: '#ead912',
