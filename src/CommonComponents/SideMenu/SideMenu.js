@@ -58,9 +58,9 @@ const ButtonText = styled.Text`
 
 class SideMenu extends Component {
 
-  onButtonClick = () => {
-    this.props.navigation.navigate('adoptionFormStack')
-  }
+  // onButtonClick = () => {
+  //   this.props.navigation.navigate('adoptionFormStack')
+  // }
 
   navigateToScreen = (route) => () => {
     const navigateAction = NavigationActions.navigate({
@@ -114,7 +114,7 @@ class SideMenu extends Component {
               About Us
               </MenuTitle>
           </MenuItemContainer>
-          <MenuButton onPress={this.onButtonClick}>
+          <MenuButton onPress={() => this.props.navigation.navigate('adoptorFormStack')}>
             <ButtonText>
               Looking for Adoption?
               </ButtonText>
@@ -124,6 +124,7 @@ class SideMenu extends Component {
       </MenuContainer>
     );
   }
+
 }
 
 SideMenu.propTypes = {
