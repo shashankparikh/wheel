@@ -6,7 +6,8 @@ import {
   TextInput,
   TouchableOpacity,
   ToastAndroid,
-  ActivityIndicator
+  ActivityIndicator,
+  Picker
 } from 'react-native'
 import styled from 'styled-components/native'
 
@@ -128,6 +129,9 @@ export class AdoptorForm extends Component {
   error = error => {
     alert('error ' + error)
   }
+  updateUser = gender => {
+    this.setState({ gender: gender })
+  }
 
   render () {
     return (
@@ -147,11 +151,14 @@ export class AdoptorForm extends Component {
           />
         </InputContainer>
         <InputContainer>
-          <InputField
-            onChangeText={gender => this.setState({ gender })}
-            placeholder='select gender'
-            value={this.state.gender}
-          />
+          <Picker
+            selectedValue={this.state.gender}
+            onValueChange={this.updateUser}
+          >
+            <Picker.Item label='Male' value='male' />
+            <Picker.Item label='Female' value='female' />
+            <Picker.Item label='Others' value='others' />
+          </Picker>
         </InputContainer>
         <InputContainer>
           <InputField
