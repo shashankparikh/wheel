@@ -21,7 +21,7 @@ const MenuItemContainer = styled.TouchableOpacity`
 const MenuTitle = styled.Text`
  font-size : 18px;
  font-weight : 600;
- font-family : Roboto_regular;
+
 `
 
 const MenuIcon = styled(FontAwesome)`
@@ -52,7 +52,7 @@ const MenuButton = styled.TouchableOpacity`
 const ButtonText = styled.Text`
   font-size : 14;
   font-weight : 600;
-  font-family : Roboto_regular;
+
 `
 
 
