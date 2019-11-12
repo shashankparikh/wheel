@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, ScrollView, TextInput } from 'react-native'
+import { Text, View, ScrollView, TextInput, TouchableOpacity } from 'react-native'
 import styled from 'styled-components/native'
 
 const Container = styled.ScrollView`
@@ -29,7 +29,7 @@ const Description = styled.Text`
     margin-bottom : 20px;
 `
 
-const Button = styled.View`
+const Button = styled.TouchableOpacity`
     margin : 0px 10px 10px 5px;
     border-radius: 50px;
     elevation : 5;
@@ -63,6 +63,7 @@ export class AdoptorForm extends Component {
             age: '',
             category: '',
             city: '',
+            email: '',
             remark: '',
         };
     }
@@ -73,6 +74,34 @@ export class AdoptorForm extends Component {
         drawerIcon: ({ tintColor }) => (
             <Icon name='home' style={{ fontSize: 24, color: tintColor }} />
         )
+    }
+
+    submitForm = () => {
+        let formData = new FormData();
+        formData.append('id:name', this.state.name);
+        formData.append('gender', this.state.name);
+        formData.append('age', this.state.name);
+        formData.append('category', this.state.name);
+        formData.append('city', this.state.name);
+        formData.append('preference', this.state.name);
+        formData.append('your-email', this.state.email);
+        console.log(formData)
+        fetch('https://works.iicreators.com/wp-json/contact-form-7/v1/contact-forms/80213/feedback', {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'multipart/form-data',
+            },
+            body: formData,
+        }).then(response => this.success(response), error => this.error(error));
+    }
+
+    success = (reponse) => {
+        alert("success " + response)
+    }
+
+    error = (error) => {
+        alert("error " + error)
     }
 
     render() {
@@ -120,8 +149,14 @@ export class AdoptorForm extends Component {
                         placeholder="your preference/remarks"
                         value={this.state.remark} />
                 </InputContainer>
+                <InputContainer>
+                    <InputField
+                        onChangeText={email => this.setState({ email })}
+                        placeholder="your email"
+                        value={this.state.email} />
+                </InputContainer>
                 <Button>
-                    <ButtonText>SUBMIT</ButtonText>
+                    <ButtonText onPress={this.submitForm}>SUBMIT</ButtonText>
                 </Button>
             </Container>
         )
