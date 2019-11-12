@@ -12,7 +12,6 @@ import { createAppContainer } from 'react-navigation'
 import { createDrawerNavigator, DrawerItems } from 'react-navigation-drawer'
 import { createStackNavigator } from 'react-navigation-stack'
 import { ThemeProvider } from 'styled-components'
-import { Ionicons } from '@expo/vector-icons';
 import theme from './src/style/theme'
 import HomeScreen from './src/Epics/Home/Home'
 import searchAgency from './src/Epics/SearchAgency/SearchAgency'
@@ -21,7 +20,9 @@ import Tabs from './src/CommonComponents/Tabs/Tabs'
 import styled from 'styled-components/native'
 import SideMenu from './src/CommonComponents/SideMenu/SideMenu';
 import AboutUs from './src/Epics/AboutUs/AboutUs';
-import * as Font from 'expo-font';
+import * as Font from 'expo-font'
+import { AppLoading } from 'expo'
+import { Ionicons } from '@expo/vector-icons';
 import AdoptorForm from './src/Epics/AdoptorForm/AdoptorForm';
 
 
@@ -64,9 +65,35 @@ const mainScreenStack = createStackNavigator(
   }
 );
 
+
+const AboutUsStack = createStackNavigator(
+
+  {
+    AboutUs: {
+       screen: AboutUs,
+     // screen: AdoptorForm,
+      name: 'About Us'
+    }
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      headerStyle: {
+        backgroundColor: '#e8d546'
+      },
+      headerTintColor: '#000',
+      headerTitleStyle: {
+        fontWeight: 'bold'
+      },
+      headerLeft: (
+        <MenuIcon name="ios-menu" size={32} color="black" onPress={() => navigation.toggleDrawer()} />
+      )
+    })
+  }
+);
+
 const adoptorFormStack = createStackNavigator(
   {
-    MainScreen: {
+    AdoptorForm: {
       screen: AdoptorForm,
       name: 'Adoption Form'
     }
@@ -111,47 +138,25 @@ const tabScreenStack = createStackNavigator(
   }
 );
 
-const AboutUsStack = createStackNavigator(
 
-  {
-    AboutUs: {
-      // screen: AboutUs,
-      screen: AdoptorForm,
-      name: 'About Us'
-    }
-  },
-  {
-    defaultNavigationOptions: ({ navigation }) => ({
-      headerStyle: {
-        backgroundColor: '#e8d546'
-      },
-      headerTintColor: '#000',
-      headerTitleStyle: {
-        fontWeight: 'bold'
-      },
-      headerLeft: (
-        <MenuIcon name="ios-menu" size={32} color="black" onPress={() => navigation.toggleDrawer()} />
-      )
-    })
-  }
-);
 
 
 const AppDrawerNavigator = createDrawerNavigator({
-  AboutUsStack: {
-    // screen: AboutUsStack
-    screen: AdoptorForm
-  },
   mainScreenStack: {
     screen: mainScreenStack,
+  },
+  AboutUsStack: {
+     screen: AboutUsStack
+   // screen: AdoptorForm
+  },
+  adoptorFormStack: {
+    screen: adoptorFormStack
   },
   tabScreenStack: {
     screen: tabScreenStack,
   },
-  adoptorFormStack: {
-    screen: adoptorFormStack
-  }
 },
+
   {
     drawerWidth: 250,
     contentComponent: SideMenu,
@@ -161,15 +166,27 @@ const AppDrawerNavigator = createDrawerNavigator({
 )
 
 class App extends React.Component {
-
-  async componentDidMount() {
-    await Font.loadAsync({
-      'roboto': require('./assets/fonts/Roboto-Regular.ttf'),
-    });
+  constructor (props) {
+    super(props)
+    this.state = {
+      isReady: false
+    }
   }
 
+  async componentDidMount () {
+    await Font.loadAsync({
+      Roboto: require('native-base/Fonts/Roboto.ttf'),
+      Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
+      ...Ionicons.font
+    })
+    this.setState({ isReady: true })
+  }
 
   render() {
+    if (!this.state.isReady) {
+      return <AppLoading />
+    }
+
     return (
       <ThemeProvider theme={theme}>
         <AppDrawerNavigator />
