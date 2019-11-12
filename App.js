@@ -6,7 +6,8 @@ import {
   Button,
   SafeAreaView,
   ScrollView,
-  Image
+  Image,
+  Icon
 } from 'react-native';
 import { createAppContainer } from 'react-navigation'
 import { createDrawerNavigator, DrawerItems } from 'react-navigation-drawer'
@@ -131,9 +132,8 @@ const tabScreenStack = createStackNavigator(
       headerTitleStyle: {
         fontWeight: 'bold'
       },
-      headerLeft: (
-        <MenuIcon name="ios-menu" size={32} color="black" onPress={() => navigation.toggleDrawer()} />
-      )
+      headerLeft: 
+      ( <MenuIcon name='md-arrow-round-back' size={32} onPress={ () =>navigation.navigate('mainScreenStack') }  /> ), 
     })
   }
 );

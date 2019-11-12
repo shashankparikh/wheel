@@ -5,6 +5,7 @@ import { AdoptionProcessData } from '../../AdoptionProcessData';
 
 const Container = styled.View`
 flex-direction : row;
+width : 90%;
 padding : 10px 10px 0px 10px
 `
 
