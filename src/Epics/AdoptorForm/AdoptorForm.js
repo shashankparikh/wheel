@@ -93,7 +93,7 @@ export class AdoptorForm extends Component {
                 'Content-Type': 'multipart/form-data',
             },
             body: formData,
-        }).then(response => this.success, error => this.error);
+        }).then(response => this.success(response), error => this.error(error));
     }
 
     success = (reponse) => {
