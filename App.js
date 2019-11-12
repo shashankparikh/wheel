@@ -21,8 +21,8 @@ import Tabs from './src/CommonComponents/Tabs/Tabs'
 import styled from 'styled-components/native'
 import SideMenu from './src/CommonComponents/SideMenu/SideMenu';
 import AboutUs from './src/Epics/AboutUs/AboutUs';
-import * as Font from 'expo-font'
-import { AppLoading } from 'expo'
+import { AppLoading } from 'expo';
+import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
 import AdoptorForm from './src/Epics/AdoptorForm/AdoptorForm';
 
@@ -167,24 +167,24 @@ const AppDrawerNavigator = createDrawerNavigator({
 
 class App extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      isReady: false
-    }
+      isReady: false,
+    };
   }
 
   async componentDidMount() {
     await Font.loadAsync({
-      Roboto_regular: require('./assets/fonts/Roboto-Regular.ttf'),
-      Roboto_medium: require('./assets/fonts/Roboto-Regular.ttf'),
-      ...Ionicons.font
-    })
-    this.setState({ isReady: true })
+      Roboto: require('native-base/Fonts/Roboto.ttf'),
+      Roboto_Regular: require('./assets/fonts/Roboto-Regular.ttf'),
+      ...Ionicons.font,
+    });
+    this.setState({ isReady: true });
   }
 
   render() {
     if (!this.state.isReady) {
-      return <AppLoading />
+      return <AppLoading />;
     }
 
     return (
