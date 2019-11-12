@@ -35,10 +35,15 @@ margin-right : 10px;
 margin-bottom : 10px;
 `
 
+
 export default class Documents extends Component {
     render() {
+        const { navigation } = this.props;
         return (
             <MainContainer>
+                {/* <Text>
+                    dataID: {JSON.stringify(navigation.dangerouslyGetParent().getParam('dataID', 'NO-ID'))}
+                </Text> */}
                 {AdoptionProcessData.map((item, index) => {
                     return <Container>
                         <IndexContainer>
