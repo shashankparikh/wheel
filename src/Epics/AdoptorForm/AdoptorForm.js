@@ -63,7 +63,7 @@ const PickerField = styled.TextInput`
 `
 
 export class AdoptorForm extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       name: '',
@@ -133,7 +133,7 @@ export class AdoptorForm extends Component {
     this.setState({ gender: gender })
   }
 
-  render () {
+  render() {
     return (
       <Container>
         <Title> Amazing thought! </Title>
@@ -197,12 +197,12 @@ export class AdoptorForm extends Component {
             value={this.state.email}
           />
         </InputContainer>
-        <Button>
+        <Button onPress={this.submitForm}>
           {this.state.showProgress ? (
-            <ActivityIndicator animating size='small' />
+            <ActivityIndicator animating size='small' color="black" />
           ) : (
-            <ButtonText onPress={this.submitForm}>SUBMIT</ButtonText>
-          )}
+              <ButtonText >SUBMIT</ButtonText>
+            )}
         </Button>
       </Container>
     )

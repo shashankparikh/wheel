@@ -25,6 +25,7 @@ const SearchButtonIcon = styled(FontAwesome)`
 const ButtonText = styled.Text`
   font-size: 14;
   font-weight: 500;
+  font-family : Roboto_regular;
 `
 
 const MenuButton = styled.TouchableOpacity`

@@ -6,7 +6,8 @@ import {
   Button,
   SafeAreaView,
   ScrollView,
-  Image
+  Image,
+  Icon
 } from 'react-native';
 import { createAppContainer } from 'react-navigation'
 import { createDrawerNavigator, DrawerItems } from 'react-navigation-drawer'
@@ -70,8 +71,8 @@ const AboutUsStack = createStackNavigator(
 
   {
     AboutUs: {
-       screen: AboutUs,
-     // screen: AdoptorForm,
+      screen: AboutUs,
+      // screen: AdoptorForm,
       name: 'About Us'
     }
   },
@@ -131,9 +132,8 @@ const tabScreenStack = createStackNavigator(
       headerTitleStyle: {
         fontWeight: 'bold'
       },
-      headerLeft: (
-        <MenuIcon name="ios-menu" size={32} color="black" onPress={() => navigation.toggleDrawer()} />
-      )
+      headerLeft: 
+      ( <MenuIcon name='md-arrow-round-back' size={32} onPress={ () =>navigation.navigate('mainScreenStack') }  /> ), 
     })
   }
 );
@@ -146,8 +146,8 @@ const AppDrawerNavigator = createDrawerNavigator({
     screen: mainScreenStack,
   },
   AboutUsStack: {
-     screen: AboutUsStack
-   // screen: AdoptorForm
+    screen: AboutUsStack
+    // screen: AdoptorForm
   },
   adoptorFormStack: {
     screen: adoptorFormStack
@@ -166,17 +166,17 @@ const AppDrawerNavigator = createDrawerNavigator({
 )
 
 class App extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       isReady: false
     }
   }
 
-  async componentDidMount () {
+  async componentDidMount() {
     await Font.loadAsync({
-      Roboto: require('native-base/Fonts/Roboto.ttf'),
-      Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
+      Roboto_regular: require('./assets/fonts/Roboto-Regular.ttf'),
+      Roboto_medium: require('./assets/fonts/Roboto-Regular.ttf'),
       ...Ionicons.font
     })
     this.setState({ isReady: true })
