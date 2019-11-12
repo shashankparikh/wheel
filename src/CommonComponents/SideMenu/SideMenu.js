@@ -21,7 +21,7 @@ const MenuItemContainer = styled.TouchableOpacity`
 const MenuTitle = styled.Text`
  font-size : 18px;
  font-weight : 600;
- font-family : roboto;
+ font-family : Roboto_regular;
 `
 
 const MenuIcon = styled(FontAwesome)`
@@ -52,7 +52,7 @@ const MenuButton = styled.TouchableOpacity`
 const ButtonText = styled.Text`
   font-size : 14;
   font-weight : 600;
-  font-family : roboto;
+  font-family : Roboto_regular;
 `
 
 
@@ -70,9 +70,9 @@ class SideMenu extends Component {
   }
 
   async componentDidMount() {
-    await Font.loadAsync({
-      roboto: require('../../../assets/fonts/Roboto-Regular.ttf'),
-    });
+    // await Font.loadAsync({
+    //   roboto: require('../../../assets/fonts/Roboto-Regular.ttf'),
+    // });
     this.animation.play();
   }
 
