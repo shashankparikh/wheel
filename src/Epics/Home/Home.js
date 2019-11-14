@@ -58,7 +58,7 @@ const SecondaryTitle = styled.Text`
 export class Home extends Component {
     static navigationOptions = {
         // To set the header image and title for the current Screen
-        title: 'Home ',
+        title: 'Home',
         drawerIcon: ({ tintColor }) => (
             <Icon name='home' style={{ fontSize: 24, color: tintColor }} />
         )

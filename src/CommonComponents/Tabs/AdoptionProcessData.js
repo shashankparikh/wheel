@@ -58,7 +58,7 @@ export const AdoptionProcessData =
         },
         {
             "Index": "15",
-            "details": "TThe appeal referred to in sub-regulation (14) shall be disposed of within a period of fifteen days and the decision of the Authority in this regard shall be binding."
+            "details": "The appeal referred to in sub-regulation (14) shall be disposed of within a period of fifteen days and the decision of the Authority in this regard shall be binding."
         },
         {
             "Index": "16",
