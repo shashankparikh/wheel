@@ -4,7 +4,7 @@ import styled from 'styled-components/native'
 
 
 
-const Container = styled.View`
+const Container = styled.ScrollView`
     align-items : center;
     padding : 0px 30px;
     background-color : #fff8ea;;
