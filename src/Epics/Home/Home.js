@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Text, View, ScrollView, Linking } from 'react-native'
 import { AdoptionProcessCard } from './Component/AdoptionProcessCard/AdoptionProcessCard'
+import {AdoptionProcessData} from '../../CommonComponents//Tabs/AdoptionProcessData'
 import styled from 'styled-components/native'
 import { OtherResources } from './Component/OtherResources/OtherResources';
 import { KnowMore } from './Component/KnowMore/KnowMore';
@@ -63,9 +64,10 @@ export class Home extends Component {
             <Icon name='home' style={{ fontSize: 24, color: tintColor }} />
         )
     }
-    onCardClick = () => {
-        this.props.navigation.navigate('tabScreenStack', {
-            dataID: 1,
+    onCardClick = (data) => {
+        console.log(data,"data")
+        this.props.navigation.navigate('Documents', {
+            dataID: data,
         })
     }
     openPage = () => {
@@ -78,11 +80,11 @@ export class Home extends Component {
                 <TitleTop>Looking for Adoption Process?</TitleTop>
                 <SubTitleTop>Select Category</SubTitleTop>
                 <ScrollView horizontal={true} alwaysBounceHorizontal={true}>
-                    <AdoptionProcessCard title="NRI/Indian Living Abroad" onClick={this.onCardClick} />
-                    <AdoptionProcessCard title="Relative Adoption" onClick={this.onCardClick} />
-                    <AdoptionProcessCard title="Adoption by Step Parent" onClick={this.onCardClick} />
-                    <AdoptionProcessCard title="Foreigner Living Abroad" onClick={this.onCardClick} />
-                    <AdoptionProcessCard title="Foreigner Living in India" onClick={this.onCardClick} />
+                    <AdoptionProcessCard title="NRI/Indian Living Abroad" onClick={()=>this.onCardClick(AdoptionProcessData[0].nriData)} />
+                    <AdoptionProcessCard title="Relative Adoption" onClick={()=>this.onCardClick(AdoptionProcessData[1].relativeData)} />
+                    <AdoptionProcessCard title="Adoption by Step Parent" onClick={()=>this.onCardClick(AdoptionProcessData[2].adoptionData)} />
+                    <AdoptionProcessCard title="Foreigner Living Abroad" onClick={()=>this.onCardClick(AdoptionProcessData[3].abroadData)} />
+                    <AdoptionProcessCard title="Foreigner Living in India" onClick={()=>this.onCardClick(AdoptionProcessData[4].indiaData)} />
 
                 </ScrollView>
                 <SecondaryTitle>Search Agencies</SecondaryTitle>

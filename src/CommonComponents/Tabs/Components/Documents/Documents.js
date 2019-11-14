@@ -5,7 +5,7 @@ import { AdoptionProcessData } from '../../AdoptionProcessData'
 
 const Container = styled.View`
   flex-direction: row;
-  width : 90%;
+  width: 90%;
   padding: 10px 10px;
 `
 
@@ -35,24 +35,38 @@ const Description = styled.Text`
   margin-bottom: 10px;
 `
 
-
 export default class Documents extends Component {
-    render() {
-        return (
-            <MainContainer>
-                {AdoptionProcessData.map((item, index) => {
-                    return (
-                        <Container>
-                            <IndexContainer>
-                                <Index>{item.Index}</Index>
-                            </IndexContainer>
-                            <DescriptionContainer>
-                                <Description>{item.details}</Description>
-                            </DescriptionContainer>
-                        </Container>
-                    )
-                })}
-            </MainContainer>
-        )
+  constructor (props) {
+    super(props)
+    this.state = {
+      documentData: ''
     }
+  }
+  componentWillMount () {
+      console.log(this.props.navigation.state.params,"this.props.navigation.state.params")
+      const {docData} = this.props.navigation.state.params
+    this.setState({ documentData: this.props.navigation.state.params })
+    // var params = props.navigation.state.params;
+    console.log(this.state.documentData, 'params')
+  }
+
+  render () {
+    const { documentData } = this.state
+    return (
+      <MainContainer>
+        {documentData.documentData.map((item, index) => {
+          return (
+            <Container>
+              <IndexContainer>
+                <Index>{item.Index}</Index>
+              </IndexContainer>
+              <DescriptionContainer>
+                <Description>{item.details}</Description>
+              </DescriptionContainer>
+            </Container>
+          )
+        })}
+      </MainContainer>
+    )
+  }
 }
