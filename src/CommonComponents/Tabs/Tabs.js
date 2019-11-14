@@ -6,12 +6,13 @@ import Documents from './Components/Documents/Documents'
 import Eligibility from './Components/Eligibility/Eligibility'
 import Guidelines from './Components/Guidelines/Guidelines'
 
-
-const Tabs = createMaterialTopTabNavigator({
-    Documents: { screen: Documents },
-    Eligibility: { screen: Eligibility },
-    Guidelines: { screen: Guidelines }
-}, {
+const Tabs = createMaterialTopTabNavigator(
+    {
+        Documents: { screen: Documents },
+        Eligibility: { screen: Eligibility },
+        Guidelines: { screen: Guidelines }
+    },
+    {
         tabBarOptions: {
             activeTintColor: '#000',
             inactiveTintColor: 'gray',
@@ -21,6 +22,7 @@ const Tabs = createMaterialTopTabNavigator({
             },
             indicatorStyle: {
                 backgroundColor: '#ead912',
+                height: 3,
             },
         }
     }, {
