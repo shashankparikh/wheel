@@ -46,7 +46,7 @@ const Description = styled.Text`
 `
 
 const Button = styled.TouchableOpacity`
-  margin: 0px 10px 10px 5px;
+  margin: 0px 10px 50px 5px;
   border-radius: 50px;
   elevation: 5;
   text-align: center;
@@ -161,6 +161,8 @@ export class AdoptorForm extends Component {
           <Picker
             selectedValue={this.state.gender}
             onValueChange={this.updateUser}
+            style={{ height: 40 }}
+            itemStyle={{ height: 40 }}
           >
             <Picker.Item label='Male' value='male' />
             <Picker.Item label='Female' value='female' />

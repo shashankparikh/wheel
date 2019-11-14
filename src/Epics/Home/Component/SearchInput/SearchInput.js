@@ -54,9 +54,11 @@ export class SearchInput extends Component {
       <SearchAgencyContainer>
         <PickerContainer>
           <Picker
+            style={{ height: 40 }}
+            itemStyle={{ height: 40 }}
             selectedValue={this.state.selectedArea}
             onValueChange={selectedArea => this.setState({ selectedArea })}
-            mode='dropdown'
+            mode='dialog'
           >
             {state.map((item, index) => {
               return <Picker.Item label={item.name} value={item.code} />

@@ -1,9 +1,12 @@
 {
   "expo": {
-    "name": "InnerWheel",
+    "name": "InnerWheel | Orphan Free India",
     "slug": "innerwheelorg",
     "privacy": "public",
     "sdkVersion": "35.0.0",
+    "android": {
+      "package": "com.innerwheelindia.innerwheelorphanfreeindia"
+    },
     "platforms": [
       "ios",
       "android",

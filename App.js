@@ -129,6 +129,7 @@ const tabScreenStack = createStackNavigator(
         backgroundColor: '#e8d546'
       },
       headerTintColor: '#000',
+      title: "Process Details",
       headerTitleStyle: {
         fontWeight: 'bold'
       },
