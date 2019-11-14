@@ -24,6 +24,13 @@ const InputContainer = styled.View`
   margin-bottom: 20px;
   max-width: 350px;
 `
+const PickerContainer = styled.View`
+  border: 1px solid black;
+  border-radius: 50px;
+  padding: 0px 20px;
+  margin-bottom: 20px;
+  max-width: 350px;
+`
 
 const Title = styled.Text`
   font-size: 36;
@@ -150,7 +157,7 @@ export class AdoptorForm extends Component {
             value={this.state.name}
           />
         </InputContainer>
-        <InputContainer>
+        <PickerContainer>
           <Picker
             selectedValue={this.state.gender}
             onValueChange={this.updateUser}
@@ -159,7 +166,7 @@ export class AdoptorForm extends Component {
             <Picker.Item label='Female' value='female' />
             <Picker.Item label='Others' value='others' />
           </Picker>
-        </InputContainer>
+        </PickerContainer>
         <InputContainer>
           <InputField
             onChangeText={age => this.setState({ age })}

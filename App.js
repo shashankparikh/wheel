@@ -132,8 +132,8 @@ const tabScreenStack = createStackNavigator(
       headerTitleStyle: {
         fontWeight: 'bold'
       },
-      headerLeft: 
-      ( <MenuIcon name='md-arrow-round-back' size={32} onPress={ () =>navigation.navigate('mainScreenStack') }  /> ), 
+      headerLeft:
+        (<MenuIcon name='ios-arrow-round-back' size={32} onPress={() => navigation.navigate('mainScreenStack')} />),
     })
   }
 );

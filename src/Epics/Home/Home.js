@@ -58,13 +58,15 @@ const SecondaryTitle = styled.Text`
 export class Home extends Component {
     static navigationOptions = {
         // To set the header image and title for the current Screen
-        title: 'Home ',
+        title: 'Home',
         drawerIcon: ({ tintColor }) => (
             <Icon name='home' style={{ fontSize: 24, color: tintColor }} />
         )
     }
     onCardClick = () => {
-        this.props.navigation.navigate('tabScreenStack')
+        this.props.navigation.navigate('tabScreenStack', {
+            dataID: 1,
+        })
     }
     openPage = () => {
         Linking.openURL('https://google.com')
@@ -77,10 +79,11 @@ export class Home extends Component {
                 <SubTitleTop>Select Category</SubTitleTop>
                 <ScrollView horizontal={true} alwaysBounceHorizontal={true}>
                     <AdoptionProcessCard title="NRI/Indian Living Abroad" onClick={this.onCardClick} />
-                    <AdoptionProcessCard title="Foreigner Living Abroad" onClick={this.onCardClick} />
-                    <AdoptionProcessCard title="Foreigner Living in India" onClick={this.onCardClick} />
                     <AdoptionProcessCard title="Relative Adoption" onClick={this.onCardClick} />
                     <AdoptionProcessCard title="Adoption by Step Parent" onClick={this.onCardClick} />
+                    <AdoptionProcessCard title="Foreigner Living Abroad" onClick={this.onCardClick} />
+                    <AdoptionProcessCard title="Foreigner Living in India" onClick={this.onCardClick} />
+
                 </ScrollView>
                 <SecondaryTitle>Search Agencies</SecondaryTitle>
                 <SearchAgencyContainer>

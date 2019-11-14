@@ -35,23 +35,24 @@ const Description = styled.Text`
   margin-bottom: 10px;
 `
 
+
 export default class Documents extends Component {
-  render () {
-    return (
-      <MainContainer>
-        {AdoptionProcessData.map((item, index) => {
-          return (
-            <Container>
-              <IndexContainer>
-                <Index>{item.Index}</Index>
-              </IndexContainer>
-              <DescriptionContainer>
-                <Description>{item.details}</Description>
-              </DescriptionContainer>
-            </Container>
-          )
-        })}
-      </MainContainer>
-    )
-  }
+    render() {
+        return (
+            <MainContainer>
+                {AdoptionProcessData.map((item, index) => {
+                    return (
+                        <Container>
+                            <IndexContainer>
+                                <Index>{item.Index}</Index>
+                            </IndexContainer>
+                            <DescriptionContainer>
+                                <Description>{item.details}</Description>
+                            </DescriptionContainer>
+                        </Container>
+                    )
+                })}
+            </MainContainer>
+        )
+    }
 }
