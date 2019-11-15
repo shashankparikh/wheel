@@ -119,6 +119,11 @@ class SideMenu extends Component {
               Looking for Adoption?
               </ButtonText>
           </MenuButton>
+          <MenuButton onPress={() => this.props.navigation.navigate('suggestionFormStack')}>
+            <ButtonText>
+              Any Suggestions?
+              </ButtonText>
+          </MenuButton>
         </ScrollView>
 
       </MenuContainer>

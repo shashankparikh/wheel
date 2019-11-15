@@ -43,11 +43,15 @@ export default class Documents extends Component {
     }
   }
   componentWillMount () {
-      console.log(this.props.navigation.state.params,"this.props.navigation.state.params")
-      const {docData} = this.props.navigation.state.params
-    this.setState({ documentData: this.props.navigation.state.params })
-    // var params = props.navigation.state.params;
-    console.log(this.state.documentData, 'params')
+    const docData = this.props.navigation.state.params.dataID
+    this.setState({ documentData: docData })
+  }
+
+  componentWillReceiveProps (nextProps) {
+    if (this.props !== nextProps) {
+      const docData = nextProps.navigation.state.params.dataID
+      this.setState({ documentData: docData })
+    }
   }
 
   render () {

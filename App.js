@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   StyleSheet,
   View,
@@ -8,7 +8,7 @@ import {
   ScrollView,
   Image,
   Icon
-} from 'react-native';
+} from 'react-native'
 import { createAppContainer } from 'react-navigation'
 import { createDrawerNavigator, DrawerItems } from 'react-navigation-drawer'
 import { createStackNavigator } from 'react-navigation-stack'
@@ -19,29 +19,27 @@ import searchAgency from './src/Epics/SearchAgency/SearchAgency'
 import TabScreen from './src/CommonComponents/Tabs/Tabs'
 import Tabs from './src/CommonComponents/Tabs/Tabs'
 import styled from 'styled-components/native'
-import SideMenu from './src/CommonComponents/SideMenu/SideMenu';
-import AboutUs from './src/Epics/AboutUs/AboutUs';
-import { AppLoading } from 'expo';
-import * as Font from 'expo-font';
-import { Ionicons } from '@expo/vector-icons';
-import AdoptorForm from './src/Epics/AdoptorForm/AdoptorForm';
-
+import SideMenu from './src/CommonComponents/SideMenu/SideMenu'
+import AboutUs from './src/Epics/AboutUs/AboutUs'
+import { AppLoading } from 'expo'
+import * as Font from 'expo-font'
+import { Ionicons } from '@expo/vector-icons'
+import AdoptorForm from './src/Epics/AdoptorForm/AdoptorForm'
+import SuggestionForm from './src/Epics/SuggestionForm/SuggestionForm'
 
 const MenuIcon = styled(Ionicons)`
-margin-left: 10px;    
-padding : 10px;
+  margin-left: 10px;
+  padding: 10px;
 `
 
 const CustomDrawerComponent = props => (
   <View style={{ flex: 1 }}>
-    <View style={{ height: 1, backgroundColor: 'white' }}>
-    </View>
+    <View style={{ height: 1, backgroundColor: 'white' }} />
     <ScrollView>
       <DrawerItems {...props} />
     </ScrollView>
   </View>
 )
-
 
 const mainScreenStack = createStackNavigator(
   {
@@ -60,15 +58,18 @@ const mainScreenStack = createStackNavigator(
         fontWeight: 'bold'
       },
       headerLeft: (
-        <MenuIcon name="ios-menu" size={32} color="black" onPress={() => navigation.toggleDrawer()} />
+        <MenuIcon
+          name='ios-menu'
+          size={32}
+          color='black'
+          onPress={() => navigation.toggleDrawer()}
+        />
       )
     })
   }
-);
-
+)
 
 const AboutUsStack = createStackNavigator(
-
   {
     AboutUs: {
       screen: AboutUs,
@@ -86,11 +87,16 @@ const AboutUsStack = createStackNavigator(
         fontWeight: 'bold'
       },
       headerLeft: (
-        <MenuIcon name="ios-menu" size={32} color="black" onPress={() => navigation.toggleDrawer()} />
+        <MenuIcon
+          name='ios-menu'
+          size={32}
+          color='black'
+          onPress={() => navigation.toggleDrawer()}
+        />
       )
     })
   }
-);
+)
 
 const adoptorFormStack = createStackNavigator(
   {
@@ -109,12 +115,44 @@ const adoptorFormStack = createStackNavigator(
         fontWeight: 'bold'
       },
       headerLeft: (
-        <MenuIcon name="ios-menu" size={32} color="black" onPress={() => navigation.toggleDrawer()} />
+        <MenuIcon
+          name='ios-menu'
+          size={32}
+          color='black'
+          onPress={() => navigation.toggleDrawer()}
+        />
       )
     })
   }
-);
+)
 
+const suggestionFormStack = createStackNavigator(
+  {
+    SuggestionForm: {
+      screen: SuggestionForm,
+      name: 'Adoption Form'
+    }
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      headerStyle: {
+        backgroundColor: '#e8d546'
+      },
+      headerTintColor: '#000',
+      headerTitleStyle: {
+        fontWeight: 'bold'
+      },
+      headerLeft: (
+        <MenuIcon
+          name='ios-menu'
+          size={32}
+          color='black'
+          onPress={() => navigation.toggleDrawer()}
+        />
+      )
+    })
+  }
+)
 
 const tabScreenStack = createStackNavigator(
   {
@@ -129,72 +167,75 @@ const tabScreenStack = createStackNavigator(
         backgroundColor: '#e8d546'
       },
       headerTintColor: '#000',
-      title: "Process Details",
+      title: 'Process Details',
       headerTitleStyle: {
         fontWeight: 'bold'
       },
-      headerLeft:
-        (<MenuIcon name='ios-arrow-round-back' size={32} onPress={() => navigation.navigate('mainScreenStack')} />),
+      headerLeft: (
+        <MenuIcon
+          name='ios-arrow-round-back'
+          size={32}
+          onPress={() => navigation.navigate('mainScreenStack')}
+        />
+      )
     })
   }
-);
+)
 
-
-
-
-const AppDrawerNavigator = createDrawerNavigator({
-  mainScreenStack: {
-    screen: mainScreenStack,
+const AppDrawerNavigator = createDrawerNavigator(
+  {
+    mainScreenStack: {
+      screen: mainScreenStack
+    },
+    AboutUsStack: {
+      screen: AboutUsStack
+      // screen: AdoptorForm
+    },
+    adoptorFormStack: {
+      screen: adoptorFormStack
+    },
+    suggestionFormStack: {
+      screen: suggestionFormStack
+    },
+    tabScreenStack: {
+      screen: tabScreenStack
+    }
   },
-  AboutUsStack: {
-    screen: AboutUsStack
-    // screen: AdoptorForm
-  },
-  adoptorFormStack: {
-    screen: adoptorFormStack
-  },
-  tabScreenStack: {
-    screen: tabScreenStack,
-  },
-},
 
   {
     drawerWidth: 250,
-    contentComponent: SideMenu,
-  },
-
-
+    contentComponent: SideMenu
+  }
 )
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
-      isReady: false,
-    };
+      isReady: false
+    }
   }
 
-  async componentDidMount() {
+  async componentDidMount () {
     await Font.loadAsync({
       Roboto: require('native-base/Fonts/Roboto.ttf'),
       Roboto_Regular: require('./assets/fonts/Roboto-Regular.ttf'),
-      ...Ionicons.font,
-    });
-    this.setState({ isReady: true });
+      ...Ionicons.font
+    })
+    this.setState({ isReady: true })
   }
 
-  render() {
+  render () {
     if (!this.state.isReady) {
-      return <AppLoading />;
+      return <AppLoading />
     }
 
     return (
       <ThemeProvider theme={theme}>
         <AppDrawerNavigator />
       </ThemeProvider>
-    );
+    )
   }
-
 }
 
 export default createAppContainer(AppDrawerNavigator)
@@ -204,6 +245,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    justifyContent: 'center'
+  }
+})

@@ -67,7 +67,7 @@ export const AdoptionProcessData = [
     relativeData:{
         documentData:[
             {
-                Index: '1',
+                Index: '11',
                 details:
                   'The Indian prospective adoptive parents irrespective of their religion, if interested to adopt an orphan or abandoned or surrendered child, shall apply for the same to Specialised Adoption Agencies through Child Adoption Resource Information and Guidance System by filling up the online application form, as provided in Schedule VI, and uploading the relevant documents thereby registering themselves as prospective adoptive parents.'
               },

@@ -66,6 +66,13 @@ export class Home extends Component {
     }
     onCardClick = (data) => {
         console.log(data,"data")
+     
+        this.props.navigation.navigate('Eligibility', {
+            dataID: data,
+        })
+        this.props.navigation.navigate('Guidelines', {
+            dataID: data,
+        })
         this.props.navigation.navigate('Documents', {
             dataID: data,
         })
