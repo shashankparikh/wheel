@@ -1,25 +1,8 @@
 import React, { Component } from 'react'
 import { Text, View, Image, ScrollView } from 'react-native'
 import styled from 'styled-components/native'
+import {Container,TitleImage,TitleText} from './style'
 
-
-
-const Container = styled.ScrollView`
-    align-items : center;
-    padding : 0px 30px;
-    background-color : #fff8ea;;
-    flex : 1;
-`
-
-const TitleImage = styled.Image`
-margin-left : 10px;
-margin-bottom : 40px;
-margin-top : 30px;
-`
-const TitleText = styled.Text`
-    font-size : 18px;
-    margin-bottom : 10px;
-`
 
 export class AboutUs extends Component {
 

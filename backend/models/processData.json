@@ -1,0 +1,317 @@
+[
+    {
+      "title": "NRI",
+      "key": 0,
+      "data":{
+          "documentData":[
+              {
+                  "Index": "1",
+                  "details":
+                    "The  prospective adoptive parents irrespective of their religion, if interested to adopt an orphan or abandoned or surrendered child, shall apply for the same to Specialised Adoption Agencies through Child Adoption Resource Information and Guidance System by filling up the online application form, as provided in Schedule VI, and uploading the relevant documents thereby registering themselves as prospective adoptive parents."
+                },
+                {
+                  "Index": "2",
+                  "details":
+                    "The prospective adoptive parents shall opt for desired State or States by giving option for those particular States at the time of registration."
+                },
+                {
+                  "Index": "3",
+                  "details":
+                    "Registration on Child Adoption Resource Information and Guidance System would be a deemed registration in all Specialised Adoption Agencies of the State or States they have opted for."
+                }
+          ],
+          "eligibilityData":[
+              {
+                  "Index": "4",
+                  "details":
+                    "The registration number of prospective adoptive parents shall be available with all the Specialised Adoption Agencies in those State or States, as the case may be."
+                },
+                {
+                  "Index": "5",
+                  "details":
+                    "The registration shall be complete and confirmed to the prospective adoptive parents immediately on receipt of the completed application form and requisite documents on Child Adoption Resource Information and Guidance System: Provided that the documents shall be uploaded within a period of thirty days from the date of registration failing which the prospective adoptive parents have to register afresh."
+                },
+                {
+                  "Index": "6",
+                  "details":
+                    "The prospective adoptive parents shall get their registration number from the acknowledgement slip and use it for viewing the progress of their application."
+                }
+          ],
+          "guidelinesData":[
+              {
+                  "Index": "7",
+                  "details":
+                    "The prospective adoptive parents shall select a Specialised Adoption Agency nearest to their residence for Home Study Report in their State of habitual residence."
+                },
+                {
+                  "Index": "8",
+                  "details":
+                    "The Home Study Report of the prospective adoptive parents shall be prepared through the social worker of selected Specialised Adoption Agency and in case they are unable to conduct Home Study Report within stipulated time, they shall take the assistance of a social worker from a panel maintained by the State Adoption Resource Agency or District Child Protection Unit, as the case may be."
+                },
+                {
+                  "Index": "9",
+                  "details":
+                    "The Specialised Adoption Agency or the empanelled social worker of the State Adoption Resource Agency or District Child Protection Unit shall counsel the prospective adoptive parents during the home study."
+                },
+                {
+                  "Index": "10",
+                  "details":
+                    "The Home Study Report shall be completed in the format given in Schedule VII, within thirty days from the date of submission of requisite documents and shall be shared with the prospective adoptive parents immediately, thereafter."
+                }
+          ]
+      }
+    },
+    {
+      "title": "Relative",
+      "key": 1,
+      "data":{
+          "documentData":[
+              {
+                  "Index": "11",
+                  "details":
+                    "The Indian prospective adoptive parents irrespective of their religion, if interested to adopt an orphan or abandoned or surrendered child, shall apply for the same to Specialised Adoption Agencies through Child Adoption Resource Information and Guidance System by filling up the online application form, as provided in Schedule VI, and uploading the relevant documents thereby registering themselves as prospective adoptive parents."
+                },
+                {
+                  "Index": "2",
+                  "details":
+                    "The prospective adoptive parents shall opt for desired State or States by giving option for those particular States at the time of registration."
+                },
+                {
+                  "Index": "3",
+                  "details":
+                    "Registration on Child Adoption Resource Information and Guidance System would be a deemed registration in all Specialised Adoption Agencies of the State or States they have opted for."
+                }
+          ],
+          "eligibilityData":[
+              {
+                  "Index": "4",
+                  "details":
+                    "The registration number of prospective adoptive parents shall be available with all the Specialised Adoption Agencies in those State or States, as the case may be."
+                },
+                {
+                  "Index": "5",
+                  "details":
+                    "The registration shall be complete and confirmed to the prospective adoptive parents immediately on receipt of the completed application form and requisite documents on Child Adoption Resource Information and Guidance System: Provided that the documents shall be uploaded within a period of thirty days from the date of registration failing which the prospective adoptive parents have to register afresh."
+                },
+                {
+                  "Index": "6",
+                  "details":
+                    "The prospective adoptive parents shall get their registration number from the acknowledgement slip and use it for viewing the progress of their application."
+                }
+          ],
+          "guidelinesData":[
+              {
+                  "Index": "7",
+                  "details":
+                    "The prospective adoptive parents shall select a Specialised Adoption Agency nearest to their residence for Home Study Report in their State of habitual residence."
+                },
+                {
+                  "Index": "8",
+                  "details":
+                    "The Home Study Report of the prospective adoptive parents shall be prepared through the social worker of selected Specialised Adoption Agency and in case they are unable to conduct Home Study Report within stipulated time, they shall take the assistance of a social worker from a panel maintained by the State Adoption Resource Agency or District Child Protection Unit, as the case may be."
+                },
+                {
+                  "Index": "9",
+                  "details":
+                    "The Specialised Adoption Agency or the empanelled social worker of the State Adoption Resource Agency or District Child Protection Unit shall counsel the prospective adoptive parents during the home study."
+                },
+                {
+                  "Index": "10",
+                  "details":
+                    "The Home Study Report shall be completed in the format given in Schedule VII, within thirty days from the date of submission of requisite documents and shall be shared with the prospective adoptive parents immediately, thereafter."
+                }
+          ]
+      }
+   
+    },
+    {
+      "title": "Adoption",
+      "key": 2,
+      "data":{
+          "documentData":[
+              {
+                  "Index": "1",
+                  "details":
+                    "The Indian prospective adoptive parents irrespective of their religion, if interested to adopt an orphan or abandoned or surrendered child, shall apply for the same to Specialised Adoption Agencies through Child Adoption Resource Information and Guidance System by filling up the online application form, as provided in Schedule VI, and uploading the relevant documents thereby registering themselves as prospective adoptive parents."
+                },
+                {
+                  "Index": "2",
+                  "details":
+                    "The prospective adoptive parents shall opt for desired State or States by giving option for those particular States at the time of registration."
+                },
+                {
+                  "Index": "3",
+                  "details":
+                    "Registration on Child Adoption Resource Information and Guidance System would be a deemed registration in all Specialised Adoption Agencies of the State or States they have opted for."
+                }
+          ],
+          "eligibilityData":[
+              {
+                  "Index": "4",
+                  "details":
+                    "The registration number of prospective adoptive parents shall be available with all the Specialised Adoption Agencies in those State or States, as the case may be."
+                },
+                {
+                  "Index": "5",
+                  "details":
+                    "The registration shall be complete and confirmed to the prospective adoptive parents immediately on receipt of the completed application form and requisite documents on Child Adoption Resource Information and Guidance System: Provided that the documents shall be uploaded within a period of thirty days from the date of registration failing which the prospective adoptive parents have to register afresh."
+                },
+                {
+                  "Index": "6",
+                  "details":
+                    "The prospective adoptive parents shall get their registration number from the acknowledgement slip and use it for viewing the progress of their application."
+                }
+          ],
+          "guidelinesData":[
+              {
+                  "Index": "7",
+                  "details":
+                    "The prospective adoptive parents shall select a Specialised Adoption Agency nearest to their residence for Home Study Report in their State of habitual residence."
+                },
+                {
+                  "Index": "8",
+                  "details":
+                    "The Home Study Report of the prospective adoptive parents shall be prepared through the social worker of selected Specialised Adoption Agency and in case they are unable to conduct Home Study Report within stipulated time, they shall take the assistance of a social worker from a panel maintained by the State Adoption Resource Agency or District Child Protection Unit, as the case may be."
+                },
+                {
+                  "Index": "9",
+                  "details":
+                    "The Specialised Adoption Agency or the empanelled social worker of the State Adoption Resource Agency or District Child Protection Unit shall counsel the prospective adoptive parents during the home study."
+                },
+                {
+                  "Index": "10",
+                  "details":
+                    "The Home Study Report shall be completed in the format given in Schedule VII, within thirty days from the date of submission of requisite documents and shall be shared with the prospective adoptive parents immediately, thereafter."
+                }
+          ]
+      }
+  
+    },
+    {
+      "title": "Foreigner Living Abroad",
+      "key": 3,
+      "data":{
+          "documentData":[
+              {
+                  "Index": "1",
+                  "details":
+                    "The Indian prospective adoptive parents irrespective of their religion, if interested to adopt an orphan or abandoned or surrendered child, shall apply for the same to Specialised Adoption Agencies through Child Adoption Resource Information and Guidance System by filling up the online application form, as provided in Schedule VI, and uploading the relevant documents thereby registering themselves as prospective adoptive parents."
+                },
+                {
+                  "Index": "2",
+                  "details":
+                    "The prospective adoptive parents shall opt for desired State or States by giving option for those particular States at the time of registration."
+                },
+                {
+                  "Index": "3",
+                  "details":
+                    "Registration on Child Adoption Resource Information and Guidance System would be a deemed registration in all Specialised Adoption Agencies of the State or States they have opted for."
+                }
+          ],
+          "eligibilityData":[
+              {
+                  "Index": "4",
+                  "details":
+                    "The registration number of prospective adoptive parents shall be available with all the Specialised Adoption Agencies in those State or States, as the case may be."
+                },
+                {
+                  "Index": "5",
+                  "details":
+                    "The registration shall be complete and confirmed to the prospective adoptive parents immediately on receipt of the completed application form and requisite documents on Child Adoption Resource Information and Guidance System: Provided that the documents shall be uploaded within a period of thirty days from the date of registration failing which the prospective adoptive parents have to register afresh."
+                },
+                {
+                  "Index": "6",
+                  "details":
+                    "The prospective adoptive parents shall get their registration number from the acknowledgement slip and use it for viewing the progress of their application."
+                }
+          ],
+          "guidelinesData":[
+              {
+                  "Index": "7",
+                  "details":
+                    "The prospective adoptive parents shall select a Specialised Adoption Agency nearest to their residence for Home Study Report in their State of habitual residence."
+                },
+                {
+                  "Index": "8",
+                  "details":
+                    "The Home Study Report of the prospective adoptive parents shall be prepared through the social worker of selected Specialised Adoption Agency and in case they are unable to conduct Home Study Report within stipulated time, they shall take the assistance of a social worker from a panel maintained by the State Adoption Resource Agency or District Child Protection Unit, as the case may be."
+                },
+                {
+                  "Index": "9",
+                  "details":
+                    "The Specialised Adoption Agency or the empanelled social worker of the State Adoption Resource Agency or District Child Protection Unit shall counsel the prospective adoptive parents during the home study."
+                },
+                {
+                  "Index": "10",
+                  "details":
+                    "The Home Study Report shall be completed in the format given in Schedule VII, within thirty days from the date of submission of requisite documents and shall be shared with the prospective adoptive parents immediately, thereafter."
+                }
+          ]
+      }
+  
+    },
+    {
+      "title": "Foreigner Living in India",
+      "key": 4,
+      "data":{
+          "documentData":[
+              {
+                  "Index": "1",
+                  "details":
+                    "The Indian prospective adoptive parents irrespective of their religion, if interested to adopt an orphan or abandoned or surrendered child, shall apply for the same to Specialised Adoption Agencies through Child Adoption Resource Information and Guidance System by filling up the online application form, as provided in Schedule VI, and uploading the relevant documents thereby registering themselves as prospective adoptive parents."
+                },
+                {
+                  "Index": "2",
+                  "details":
+                    "The prospective adoptive parents shall opt for desired State or States by giving option for those particular States at the time of registration."
+                },
+                {
+                  "Index": "3",
+                  "details":
+                    "Registration on Child Adoption Resource Information and Guidance System would be a deemed registration in all Specialised Adoption Agencies of the State or States they have opted for."
+                }
+          ],
+          "eligibilityData":[
+              {
+                  "Index": "4",
+                  "details":
+                    "The registration number of prospective adoptive parents shall be available with all the Specialised Adoption Agencies in those State or States, as the case may be."
+                },
+                {
+                  "Index": "5",
+                  "details":
+                    "The registration shall be complete and confirmed to the prospective adoptive parents immediately on receipt of the completed application form and requisite documents on Child Adoption Resource Information and Guidance System: Provided that the documents shall be uploaded within a period of thirty days from the date of registration failing which the prospective adoptive parents have to register afresh."
+                },
+                {
+                  "Index": "6",
+                  "details":
+                    "The prospective adoptive parents shall get their registration number from the acknowledgement slip and use it for viewing the progress of their application."
+                }
+          ],
+          "guidelinesData":[
+              {
+                  "Index": "7",
+                  "details":
+                    "The prospective adoptive parents shall select a Specialised Adoption Agency nearest to their residence for Home Study Report in their State of habitual residence."
+                },
+                {
+                  "Index": "8",
+                  "details":
+                    "The Home Study Report of the prospective adoptive parents shall be prepared through the social worker of selected Specialised Adoption Agency and in case they are unable to conduct Home Study Report within stipulated time, they shall take the assistance of a social worker from a panel maintained by the State Adoption Resource Agency or District Child Protection Unit, as the case may be."
+                },
+                {
+                  "Index": "9",
+                  "details":
+                    "The Specialised Adoption Agency or the empanelled social worker of the State Adoption Resource Agency or District Child Protection Unit shall counsel the prospective adoptive parents during the home study."
+                },
+                {
+                  "Index": "10",
+                  "details":
+                    "The Home Study Report shall be completed in the format given in Schedule VII, within thirty days from the date of submission of requisite documents and shall be shared with the prospective adoptive parents immediately, thereafter."
+                }
+          ]
+      }
+  
+    }
+  ]
+  

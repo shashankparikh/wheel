@@ -15,8 +15,6 @@ import { createStackNavigator } from 'react-navigation-stack'
 import { ThemeProvider } from 'styled-components'
 import theme from './src/style/theme'
 import HomeScreen from './src/Epics/Home/Home'
-import searchAgency from './src/Epics/SearchAgency/SearchAgency'
-import TabScreen from './src/CommonComponents/Tabs/Tabs'
 import Tabs from './src/CommonComponents/Tabs/Tabs'
 import styled from 'styled-components/native'
 import SideMenu from './src/CommonComponents/SideMenu/SideMenu'
@@ -31,15 +29,6 @@ const MenuIcon = styled(Ionicons)`
   margin-left: 10px;
   padding: 10px;
 `
-
-const CustomDrawerComponent = props => (
-  <View style={{ flex: 1 }}>
-    <View style={{ height: 1, backgroundColor: 'white' }} />
-    <ScrollView>
-      <DrawerItems {...props} />
-    </ScrollView>
-  </View>
-)
 
 const mainScreenStack = createStackNavigator(
   {
@@ -189,7 +178,6 @@ const AppDrawerNavigator = createDrawerNavigator(
     },
     AboutUsStack: {
       screen: AboutUsStack
-      // screen: AdoptorForm
     },
     adoptorFormStack: {
       screen: adoptorFormStack
@@ -239,12 +227,3 @@ class App extends React.Component {
 }
 
 export default createAppContainer(AppDrawerNavigator)
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-})

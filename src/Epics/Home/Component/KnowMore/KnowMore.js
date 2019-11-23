@@ -1,31 +1,15 @@
 import React, { Component } from 'react'
 import { Text, View, Image, TouchableOpacity, Linking } from 'react-native'
 import styled from 'styled-components/native'
-
-
-const TitleImage = styled.Image`
-margin-left : 10px;
-margin-bottom : 10px;
-`
-
-const Title = styled.Text`
-font-size : 12px;
-padding-left : 10px;
-font-weight : 600;
-color: #cfaa30;
-text-transform: uppercase;
-text-align: left;
-`
-
+import { TitleImage } from './style'
 
 export class KnowMore extends Component {
+  openPage = () => {
+    Linking.openURL(this.props.url)
+  }
 
-    openPage = () => {
-        Linking.openURL(this.props.url)
-    }
-
-    render() {
-        const Container = styled.TouchableOpacity`
+  render () {
+    const Container = styled.TouchableOpacity`
             height : 90px;
             background: ${props => this.props.color};
             elevation : 5;
@@ -38,25 +22,27 @@ export class KnowMore extends Component {
             shadow-offset: {width: 0, height: 8};
         `
 
-        const Title = styled.Text`
-            font-size : 12px;
-            padding-left : 10px;
-            font-weight : 600;
-            color: ${props => this.props.textColor};
-            text-transform: uppercase;
-            text-align: left;
-        `
-        console.log(typeof this.props.width, "this.props.width")
-        let Width = Number(this.props.width)
-        let Height = Number(this.props.height)
-        return (
-            <Container onPress={this.openPage} >
-                {/* <TitleImage style={{ width: 30, height: 35 }} source={require('../../../../../assets/councelling.png')} /> */}
-                <TitleImage style={{ width: Width, height: Height }} source={this.props.image} />
-                <Title> {this.props.title} </Title>
-            </Container>
-        )
-    }
+    const Title = styled.Text`
+      font-size: 12px;
+      padding-left: 10px;
+      font-weight: 600;
+      color: ${props => this.props.textColor};
+      text-transform: uppercase;
+      text-align: left;
+    `
+    let Width = Number(this.props.width)
+    let Height = Number(this.props.height)
+    return (
+      <Container onPress={this.openPage}>
+        {/* <TitleImage style={{ width: 30, height: 35 }} source={require('../../../../../assets/councelling.png')} /> */}
+        <TitleImage
+          style={{ width: Width, height: Height }}
+          source={this.props.image}
+        />
+        <Title> {this.props.title} </Title>
+      </Container>
+    )
+  }
 }
 
 export default KnowMore

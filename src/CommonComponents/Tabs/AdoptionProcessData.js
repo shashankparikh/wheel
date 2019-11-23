@@ -1,13 +1,13 @@
 export const AdoptionProcessData = [
   {
     title: 'NRI',
-    key: '0',
-    nriData:{
+    key: 0,
+    data:{
         documentData:[
             {
                 Index: '1',
                 details:
-                  'The Indian prospective adoptive parents irrespective of their religion, if interested to adopt an orphan or abandoned or surrendered child, shall apply for the same to Specialised Adoption Agencies through Child Adoption Resource Information and Guidance System by filling up the online application form, as provided in Schedule VI, and uploading the relevant documents thereby registering themselves as prospective adoptive parents.'
+                  'The  prospective adoptive parents irrespective of their religion, if interested to adopt an orphan or abandoned or surrendered child, shall apply for the same to Specialised Adoption Agencies through Child Adoption Resource Information and Guidance System by filling up the online application form, as provided in Schedule VI, and uploading the relevant documents thereby registering themselves as prospective adoptive parents.'
               },
               {
                 Index: '2',
@@ -63,8 +63,8 @@ export const AdoptionProcessData = [
   },
   {
     title: 'Relative',
-    key: '1',
-    relativeData:{
+    key: 1,
+    data:{
         documentData:[
             {
                 Index: '11',
@@ -126,8 +126,8 @@ export const AdoptionProcessData = [
   },
   {
     title: 'Adoption',
-    key: '2',
-    adoptionData:{
+    key: 2,
+    data:{
         documentData:[
             {
                 Index: '1',
@@ -189,8 +189,8 @@ export const AdoptionProcessData = [
   },
   {
     title: 'Foreigner Living Abroad',
-    key: '3',
-    abroadData:{
+    key: 3,
+    data:{
         documentData:[
             {
                 Index: '1',
@@ -252,8 +252,8 @@ export const AdoptionProcessData = [
   },
   {
     title: 'Foreigner Living in India',
-    key: '4',
-    indiaData:{
+    key: 4,
+    data:{
         documentData:[
             {
                 Index: '1',
