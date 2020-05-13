@@ -39,16 +39,16 @@ export class Home extends Component {
     showProgress: false
   }
 
-  populateProcessCard = () => {
-    config.map((obj, index) => {
-      return (
-        <AdoptionProcessCard
-          title={obj.title}
-          onClick={() => this.onCardClick(AdoptionProcessData[0].nriData)}
-        />
-      )
-    })
-  }
+  // populateProcessCard = () => {
+  //   config.map((obj, index) => {
+  //     return (
+  //       <AdoptionProcessCard
+  //         title={obj.title}
+  //         onClick={() => this.onCardClick(AdoptionProcessData[0].nriData)}
+  //       />
+  //     )
+  //   })
+  // }
 
   componentDidMount () {
     axios
